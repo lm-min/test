@@ -1,22 +1,29 @@
 
-# CSS 규칙
-#### 아래 순서대로 적용시키면 됩니다.
-
-- @include ~
-- position
-- display
-- width
-- height
-- margin
-- padding
-- text - font
-- color
-- border
-- background
-- transition
+# CSS 선언순서 및 규칙
 
 
 
+>아래 순서대로하면 됩니다.
+  1. @include
+  2. content
+  3. position / float / transform
+  4. display
+  5. width/height
+  6. margin / padding
+  7. color / text / font
+  8. border
+  9. background
+  10. box-shadow
+  11. transition
+  12. 그 외의 기타 css code ( animation, opacity, visibility ··· )
+  13. z-index
+
+
+⚠️@include 사용하더라도 media 경우 최하단에 선언.
+
+****
+
+>예시
 `````````
 .sample{
 
@@ -24,6 +31,7 @@
 
   position: absolute;
   top: 0;
+  transform: translateY(-50%) rotate(12deg);
 
   display: flex;
   flex-direction: column;
@@ -32,31 +40,26 @@
   width: 10%;
   height: 10%;
 
+  color: red;
   text-wrap: nowrap;
   letter-spacing: -1px;
-
   font-size: 14px;
   font-weight: bold;
-
-  color: red;
 
   border: 1px solid red;
   border-radius: 50%;
 
-  background: red;
+  background: url('/images/img.png') no-repeat center left/18px auto;
 
   box-shadow: red;
 
   transition: all .3s;
 
-  <!-- To. 기본 규칙 외 css code.  -->
+  animation: ani 3s linear infinite;
   opacity: 0;
   visibility: hidden;
-  transform: rotate(12deg);
-
-  <!-- To. z-index 마지막에 적용합니다.  -->
+  
   z-index: 999; 
-
 }
 
 `````````
