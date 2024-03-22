@@ -1,8 +1,8 @@
 
 # CSS 규칙
-### 아래 순서로 적용시키면 됩니다.
+#### 아래 순서로 적용시키면 됩니다.
 
-- @include
+- @include ~
 - position
 - display
 - width
@@ -30,7 +30,7 @@
   flex-direction: column;
   gap: 5px;
 
-  width:	10%;
+  width: 10%;
   height: 10%;
 
   text-wrap: nowrap;
@@ -50,11 +50,12 @@
 
   transition: all .3s;
 
-
+  <!-- To. 규칙 외 css code.  -->
   opacity: 0;
   visibility: hidden;
   transform: rotate(12deg);
 
+  <!-- To. z-index 마지막에 적용합니다.  -->
   z-index: 999; 
 
 }
