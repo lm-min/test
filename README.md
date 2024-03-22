@@ -1,6 +1,6 @@
 
 # CSS 규칙
-#### 아래 순서로 적용시키면 됩니다.
+#### 아래 순서대로 적용시키면 됩니다.
 
 - @include ~
 - position
@@ -14,8 +14,7 @@
 - border
 - background
 - transition
-- 기타 등등
-- z-index (마지막)
+
 
 
 `````````
@@ -50,7 +49,7 @@
 
   transition: all .3s;
 
-  <!-- To. 규칙 외 css code.  -->
+  <!-- To. 기본 규칙 외 css code.  -->
   opacity: 0;
   visibility: hidden;
   transform: rotate(12deg);
